@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Ética de Datos e IA | ErickDDP Servicios</title>
+    <meta name="description" content="Términos de Servicio, Protocolo de Ética en Inteligencia Artificial y Secreto Profesional de ErickDDP Servicios.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        .privacy-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-400);
+            margin-bottom: 1rem;
+        }
+        .privacy-section {
+            background: rgba(24, 24, 27, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            scroll-margin-top: 100px;
+        }
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+        .privacy-section p, .privacy-section ul {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .privacy-section ul {
+            padding-left: 1.5rem;
+        }
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+        .privacy-back {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-400);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .privacy-back:hover {
+            color: var(--primary-300);
+        }
+    </style>
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+
+    <nav class="navbar scrolled">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ErickDDP Logo" height="44" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <span class="logo-fallback" style="display:none; color: var(--primary-400); font-weight: 800; font-size: 1.25rem; font-family: var(--font-sans);">ErickDDP</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#sobre-mi">Sobre mí</a>
+                <a href="index.html#digitalizacion">Digitalización</a>
+                <a href="index.html#contacto">Contacto</a>
+            </div>
+            <a href="index.html#contacto" class="btn btn-primary btn-glow">Agendar consulta gratis</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <button class="close-btn" id="mobileNavClose" aria-label="Cerrar menú">✕</button>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="index.html#digitalizacion">Digitalización</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="index.html#contacto" class="btn btn-primary btn-lg">Agendar consulta gratis</a>
+    </div>
+
+    <main class="privacy-container">
+        <a href="index.html" class="privacy-back">← Volver al inicio</a>
+        
+        <header class="privacy-header">
+            <span class="hero-label drop-in" style="margin-bottom: 1rem; display: inline-block;">Legal, Ética & Compliance</span>
+            <h1>Términos de Servicio y Protocolos</h1>
+            <p style="color: var(--text-muted);">Transparencia y seguridad en cada proceso.</p>
+        </header>
+
+        <section id="terminos" class="privacy-section">
+            <h2>Términos de Servicio</h2>
+            <p>Los presentes lineamientos regulan la relación profesional en la prestación de servicios contables, fiscales y tecnológicos:</p>
+            <ul>
+                <li><strong>Alcance de Servicios:</strong> Los servicios se limitan a la asesoría fiscal, contabilidad corporativa y soluciones de automatización descritas en la propuesta de cada cliente.</li>
+                <li><strong>Limitación de Responsabilidad Fiscal:</strong> El cliente es el máximo responsable de la procedencia, veracidad y legalidad de los comprobantes y operaciones que envía para su procesamiento contable. Nuestra responsabilidad recae en la correcta interpretación, registro y presentación basada exclusivamente en la información provista.</li>
+                <li><strong>Tiempos de Respuesta:</strong> El periodo estándar de respuesta a consultas, requerimientos o solicitudes de asesoría será no mayor a 24 horas hábiles. Para contingencias fiscales o fallas en sistemas automatizados críticos, se brindará atención prioritaria.</li>
+                <li><strong>Compromisos y Entregables:</strong> Las fechas de presentación de declaraciones (SAT) y entrega de estados financieros mensuales están condicionadas a que el cliente provea la documentación necesaria dentro de los primeros 5 días naturales de cada mes.</li>
+            </ul>
+        </section>
+
+        <section id="etica" class="privacy-section">
+            <h2>Protocolo de Ética en Datos e Inteligencia Artificial</h2>
+            <p>Implementamos soluciones de IA robustas sin comprometer la seguridad de su información operativa:</p>
+            <ul>
+                <li><strong>Garantía de "No-Training" (Cero Entrenamiento):</strong> Aseguramos contractualmente que sus bases de datos, cifras fiscales y datos sensibles <strong>no alimentan redes neuronales públicas</strong> (como ChatGPT abierto) ni ningún otro modelo para su mejora.</li>
+                <li><strong>Uso Exclusivo de APIs Seguras:</strong> Todos nuestros flujos que utilizan IA se realizan mediante conexiones cifradas empresariales (Enterprise APIs) que cuentan con cláusulas de <em>cero retención</em> de datos de clientes después del procesamiento.</li>
+                <li><strong>Propósito Estricto:</strong> La Inteligencia Artificial se utiliza exclusivamente para optimizar procesos como clasificación de transacciones, análisis estadístico anónimo y creación de flujos de automatización entre plataformas, siempre bajo supervisión humana profesional.</li>
+            </ul>
+        </section>
+
+        <section id="secreto" class="privacy-section">
+            <h2>Gestión de Bases de Datos y Secreto Profesional</h2>
+            <p>Nuestro modelo operativo unifica el rigor de la Contaduría Pública con arquitecturas tecnológicas modernas:</p>
+            <ul>
+                <li><strong>Vínculo Jurídico y Ético:</strong> Como Contador Público Titulado, el secreto profesional ampara todos los niveles del tratamiento de datos. Esta garantía se extiende a las bases de datos automatizadas y almacenes en la nube que gestionamos para nuestros clientes.</li>
+                <li><strong>Resguardo en la Nube:</strong> Toda información y expediente electrónico son almacenados en servidores seguros, aplicando los mismos principios de inalterabilidad y confidencialidad exigidos por las normas contables y leyes fiscales.</li>
+                <li><strong>Acceso Restringido:</strong> Solo usted como cliente y el profesional a cargo tienen acceso de lectura o escritura a los recursos financieros y contables digitalizados.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="ErickDDP Logo" height="30" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <span class="logo-fallback" style="display:none; color: var(--primary-400); font-weight: 800; font-size: 1.25rem; font-family: var(--font-sans);">ErickDDP</span>
+                    <p class="copyright">© 2026 ErickDDP Servicios. Todos los derechos reservados. · Ciudad de México</p>
+                </div>
+                <div class="footer-links">
+                    <div class="col">
+                        <h4>Servicios</h4>
+                        <a href="index.html#servicios">Declaraciones</a>
+                        <a href="index.html#servicios">Contabilidad</a>
+                        <a href="index.html#servicios">Desarrollo Web</a>
+                    </div>
+                    <div class="col">
+                        <h4>Legal</h4>
+                        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+                        <a href="legal.html#terminos">Términos de Servicio</a>
+                        <a href="legal.html#etica">Ética de Datos e IA</a>
+                    </div>
+                    <div class="col">
+                        <h4>Contacto</h4>
+                        <a href="https://wa.me/525534806184">WhatsApp</a>
+                        <a href="mailto:cperickd@gmail.com">Email</a>
+                        <a href="https://erickddp.com">Web Personal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErickDDP Servicios | Contador Público + IA</title>
+    <meta name="description"
+        content="Asesoría fiscal, contabilidad digital y digitalización de negocios con Inteligencia Artificial. Atención directa en CDMX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="particles-container" id="particles"></div>
+
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="ErickDDP Logo" height="44"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <span class="logo-fallback"
+                    style="display:none; color: var(--primary-400); font-weight: 800; font-size: 1.25rem; font-family: var(--font-sans);">ErickDDP</span>
+            </a>
+            <div class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#digitalizacion">Digitalización</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <a href="#contacto" class="btn btn-primary btn-glow">Agendar consulta gratis</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <button class="close-btn" id="mobileNavClose" aria-label="Cerrar menú">✕</button>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#digitalizacion">Digitalización</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn btn-primary btn-lg">Agendar consulta gratis</a>
+    </div>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-label reveal">⚡ Contador Público + Inteligencia Artificial</span>
+                <h1 class="reveal reveal-delay-1">Tu negocio merece crecer. <br>Yo te ayudo a lograrlo.</h1>
+                <p class="hero-subtitle reveal reveal-delay-2">Asesoría fiscal, contabilidad digital y digitalización
+                    completa de tu negocio. Precios accesibles, atención directa. Sin despachos intermediarios.</p>
+                <div class="hero-actions reveal reveal-delay-3">
+                    <a href="#contacto" class="btn btn-primary btn-lg">Quiero una consulta gratis</a>
+                    <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal reveal-delay-2">
+                <div class="visual-glow"></div>
+                <img src="images/hero_visual.png" alt="Contabilidad e Inteligencia Artificial" class="floating-image"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <!-- SVG Fallback Visual -->
+                <div class="hero-visual-fallback" style="display:none;">
+                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+                                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                            </radialGradient>
+                            <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#18181B" />
+                                <stop offset="100%" stop-color="#09090B" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Glow background -->
+                        <circle cx="250" cy="250" r="220" fill="url(#glow)" />
+                        <!-- Main card -->
+                        <rect x="80" y="120" width="340" height="220" rx="16" fill="url(#cardGrad)" stroke="#38bdf8"
+                            stroke-width="1" stroke-opacity="0.4" />
+                        <!-- Chart bars -->
+                        <rect x="120" y="240" width="30" height="70" rx="4" fill="#38bdf8" opacity="0.6" />
+                        <rect x="165" y="210" width="30" height="100" rx="4" fill="#38bdf8" opacity="0.8" />
+                        <rect x="210" y="190" width="30" height="120" rx="4" fill="#38bdf8" />
+                        <rect x="255" y="220" width="30" height="90" rx="4" fill="#38bdf8" opacity="0.7" />
+                        <rect x="300" y="200" width="30" height="110" rx="4" fill="#38bdf8" opacity="0.9" />
+                        <rect x="345" y="170" width="30" height="140" rx="4" fill="#38bdf8" />
+                        <!-- Line chart -->
+                        <polyline points="120,230 165,200 210,180 255,210 300,190 345,160" fill="none" stroke="#7dd3fc"
+                            stroke-width="2" stroke-dasharray="5,3" opacity="0.6" />
+                        <!-- Header text lines -->
+                        <rect x="120" y="145" width="120" height="8" rx="4" fill="#38bdf8" opacity="0.8" />
+                        <rect x="120" y="160" width="80" height="6" rx="3" fill="#71717A" opacity="0.6" />
+                        <!-- Floating small card -->
+                        <rect x="300" y="80" width="140" height="80" rx="12" fill="#18181B" stroke="#38bdf8"
+                            stroke-width="1" stroke-opacity="0.5" />
+                        <rect x="318" y="100" width="60" height="6" rx="3" fill="#38bdf8" opacity="0.7" />
+                        <rect x="318" y="115" width="40" height="6" rx="3" fill="#71717A" opacity="0.5" />
+                        <text x="318" y="148" font-family="monospace" font-size="16" fill="#38bdf8"
+                            font-weight="bold">+20%</text>
+                        <!-- Floating bottom card -->
+                        <rect x="60" y="360" width="130" height="70" rx="12" fill="#18181B" stroke="#38bdf8"
+                            stroke-width="1" stroke-opacity="0.4" />
+                        <text x="80" y="390" font-family="monospace" font-size="11" fill="#A1A1AA">SAT · CFDI 4.0</text>
+                        <rect x="80" y="400" width="70" height="5" rx="2" fill="#38bdf8" opacity="0.6" />
+                        <rect x="80" y="412" width="50" height="5" rx="2" fill="#38bdf8" opacity="0.3" />
+                        <!-- Dots -->
+                        <circle cx="440" cy="150" r="4" fill="#38bdf8" opacity="0.5" />
+                        <circle cx="60" cy="200" r="3" fill="#38bdf8" opacity="0.4" />
+                        <circle cx="420" cy="380" r="5" fill="#38bdf8" opacity="0.3" />
+                        <circle cx="150" cy="450" r="3" fill="#38bdf8" opacity="0.4" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <section class="social-proof">
+        <div class="container">
+            <div class="badges-row">
+                <div class="badge glass-pill">🎓 Cédula Profesional · 13758780</div>
+                <div class="badge glass-pill">🤖 Lic. Inteligencia Artificial</div>
+                <div class="badge glass-pill">📍 Ciudad de México</div>
+                <div class="badge glass-pill">⭐ +5 años de experiencia</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title reveal">Soluciones <span style="color: var(--primary-400);">Reales</span></h2>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/1.png" alt="Declaración Anual">
+                            <div class="card-overlay">
+                                <h3>Declaración Anual / SAT</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Declaración Anual / SAT</h3>
+                            <p>Cumple con el SAT sin estrés. Calculo y presento tu declaración anual con todo en orden.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">SAT</span>
+                                <span class="tag">ISR</span>
+                                <span class="tag">CFDI 4.0</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/2.png" alt="Contabilidad Mensual">
+                            <div class="card-overlay">
+                                <h3>Contabilidad Mensual</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Contabilidad Mensual</h3>
+                            <p>Lleva tu negocio con orden real. Estados financieros, conciliaciones y reportes claros
+                                cada mes.</p>
+                            <div class="tags">
+                                <span class="tag">Balance</span>
+                                <span class="tag">Reportes</span>
+                                <span class="tag">Dashboards</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/3.png" alt="Página Web Profesional">
+                            <div class="card-overlay">
+                                <h3>Página Web Profesional</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Página Web Profesional</h3>
+                            <p>Tu negocio necesita presencia digital. Diseño y desarrollo tu sitio web desde cero.</p>
+                            <div class="tags">
+                                <span class="tag">Diseño</span>
+                                <span class="tag">Dominio</span>
+                                <span class="tag">SEO básico</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/4.png" alt="Integración Plataformas">
+                            <div class="card-overlay">
+                                <h3>Plataformas Digitales</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Plataformas Digitales</h3>
+                            <p>Integra tu negocio a Uber Eats, DiDi Food, Rappi y más. Más canales, más ventas.</p>
+                            <div class="tags">
+                                <span class="tag">Uber Eats</span>
+                                <span class="tag">DiDi</span>
+                                <span class="tag">Rappi</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/5.png" alt="Automatización IA">
+                            <div class="card-overlay">
+                                <h3>Automatización con IA</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Automatización con IA</h3>
+                            <p>Flujos inteligentes con n8n, captura de leads automática, notificaciones y más.</p>
+                            <div class="tags">
+                                <span class="tag">n8n</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">IA</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/6.png" alt="Asesoría Fiscal">
+                            <div class="card-overlay">
+                                <h3>Asesoría Fiscal</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Asesoría Fiscal</h3>
+                            <p>¿Tienes dudas con el SAT, DIOT o CFDI? Te oriento paso a paso con soluciones reales.</p>
+                            <div class="tags">
+                                <span class="tag">DIOT</span>
+                                <span class="tag">Buzon SAT</span>
+                                <span class="tag">PM</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="dashboard-metrics" id="metricas">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item reveal">
+                    <span class="metric-number" data-target="20">0</span>
+                    <span class="metric-label">Razones sociales administradas</span>
+                </div>
+                <div class="metric-item reveal reveal-delay-1">
+                    <span class="metric-number" data-target="5">0</span>
+                    <span class="metric-label">Años de experiencia contable</span>
+                </div>
+                <div class="metric-item reveal reveal-delay-2">
+                    <span class="metric-number" data-target="100" data-suffix="%">0%</span>
+                    <span class="metric-label">Digital y automatizado</span>
+                </div>
+                <div class="metric-item reveal reveal-delay-3">
+                    <span class="metric-number" data-target="2">0</span>
+                    <span class="metric-label">Licenciaturas: Contaduría + IA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SECCIÓN DIGITALIZACIÓN -->
+    <section id="digitalizacion" class="">
+        <div class="container">
+            <div class="digitalizacion-grid">
+                <div class="digitalizacion-text reveal">
+                    <span class="hero-label">🚀 Digitalización de Negocios</span>
+                    <h2>Lleva tu negocio al mundo digital</h2>
+                    <p>Integro tu negocio a las plataformas más importantes del mercado y automatizo tus procesos para
+                        que puedas enfocarte en lo que realmente importa: crecer.</p>
+                    <div class="digitalizacion-steps">
+                        <div class="step-item">
+                            <div class="step-icon">📋</div>
+                            <div class="step-content">
+                                <h4>Diagnóstico inicial gratuito</h4>
+                                <p>Analizamos tu negocio y definimos la mejor estrategia digital.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">⚙️</div>
+                            <div class="step-content">
+                                <h4>Configuración y alta en plataformas</h4>
+                                <p>Te damos de alta en Uber Eats, DiDi Food, Rappi y más.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">🤖</div>
+                            <div class="step-content">
+                                <h4>Automatización con IA</h4>
+                                <p>Flujos automáticos con n8n para captura de leads y notificaciones.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">📈</div>
+                            <div class="step-content">
+                                <h4>Seguimiento y optimización</h4>
+                                <p>Monitoreo continuo y ajustes para maximizar tus resultados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary" style="margin-top: 2rem; display: inline-flex;">Quiero
+                        digitalizar mi negocio</a>
+                </div>
+                <div class="digitalizacion-visual reveal reveal-delay-2">
+                    <div class="platform-card">
+                        <div class="platform-icon">🛵</div>
+                        <div class="platform-name">Uber Eats</div>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🚗</div>
+                        <div class="platform-name">DiDi Food</div>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🐰</div>
+                        <div class="platform-name">Rappi</div>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🌐</div>
+                        <div class="platform-name">Tu Página Web</div>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🤖</div>
+                        <div class="platform-name">n8n + IA</div>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">📊</div>
+                        <div class="platform-name">Power BI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="sobre-mi" class="about-section">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="images/prof.png" alt="Erick Domínguez Del Prado"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="fallback-avatar">ED</div>
+            </div>
+            <div class="about-text">
+                <h2>Erick Domínguez Del Prado</h2>
+                <div class="about-bio">
+                    <p>Soy Contador Público titulado con cédula profesional y más de 5 años de experiencia manejando
+                        contabilidad corporativa, cumplimiento fiscal ante el SAT y administración de múltiples razones
+                        sociales.</p>
+                    <p>Actualmente curso una Licenciatura en Inteligencia Artificial, lo que me permite combinar lo
+                        mejor de dos mundos: el rigor contable y el poder de la tecnología. El resultado son soluciones
+                        reales, accesibles y automatizadas para negocios como el tuyo.</p>
+                </div>
+                <div class="skills-row">
+                    <span class="skill-tag">SAT</span>
+                    <span class="skill-tag">CFDI 4.0</span>
+                    <span class="skill-tag">DIOT</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Automatización</span>
+                    <span class="skill-tag">Páginas Web</span>
+                </div>
+                <a href="https://erickddp.com" target="_blank" class="link-arrow">Ver mi portafolio completo →</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>¿Empezamos?</h2>
+            <p>Primera consulta completamente gratis. Sin compromiso.</p>
+            <a href="#contacto" class="btn btn-primary btn-lg">Agendar ahora</a>
+            <p class="whatsapp-direct">O escríbeme directo: <a href="https://wa.me/525534806184" target="_blank">
+                    55-3480-6184</a></p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="lead-capture">
+        <div class="container">
+            <div class="form-card glass-card">
+                <div class="form-header">
+                    <h2>¿Listo para ordenar tu negocio?</h2>
+                    <p>Cuéntame qué necesitas y te respondo en menos de 24 horas. Primera consulta gratis.</p>
+                </div>
+                <form id="form-servicios-erickddp" class="lead-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="negocio">Nombre de tu negocio o actividad</label>
+                        <input type="text" id="negocio" name="negocio"
+                            placeholder="Empresa S.A. de C.V. / Freelancer">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="55 1234 5678">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona una opción...</option>
+                            <option value="Declaración Anual / SAT">Declaración Anual / SAT</option>
+                            <option value="Contabilidad Mensual">Contabilidad Mensual</option>
+                            <option value="Página Web Profesional">Página Web Profesional</option>
+                            <option value="Integración a Plataformas">Integración a Plataformas (Uber, DiDi, Rappi)
+                            </option>
+                            <option value="Automatización con IA / n8n">Automatización con IA / n8n</option>
+                            <option value="Asesoría Fiscal General">Asesoría Fiscal General</option>
+                            <option value="No sé, necesito orientación">No sé, necesito orientación</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje / ¿Cuéntame más sobre tu negocio?</label>
+                        <textarea id="mensaje" name="mensaje" rows="3"
+                            placeholder="Detalles adicionales (opcional)"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px;">
+                        <input type="checkbox" id="acepto_privacidad" name="Acepto_Privacidad" required style="margin-top: 5px; cursor: pointer; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--primary-400);">
+                        <label for="acepto_privacidad" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; display: inline; cursor: pointer;">
+                            Acepto el <a href="aviso-privacidad.html" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Aviso de Privacidad</a>, los <a href="legal.html#terminos" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Términos de Servicio</a> y el <a href="legal.html#etica" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Protocolo de Ética en IA</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-pulse">Enviar y recibir consulta
+                        gratis</button>
+
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="ErickDDP Logo" height="30">
+                    <p class="copyright">© 2025 ErickDDP Servicios. Todos los derechos reservados. · Ciudad de México
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="col">
+                        <h4>Servicios</h4>
+                        <a href="#servicios">Declaraciones</a>
+                        <a href="#servicios">Contabilidad</a>
+                        <a href="#servicios">Desarrollo Web</a>
+                    </div>
+                    <div class="col">
+                        <h4>Legal</h4>
+                        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+                        <a href="legal.html#terminos">Términos de Servicio</a>
+                        <a href="legal.html#etica">Ética de Datos e IA</a>
+                    </div>
+                    <div class="col">
+                        <h4>Contacto</h4>
+                        <a href="https://wa.me/525534806184">WhatsApp</a>
+                        <a href="mailto:cperickd@gmail.com">Email</a>
+                        <a href="https://erickddp.com">Web Personal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
