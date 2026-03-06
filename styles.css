@@ -55,6 +55,7 @@ body {
     font-family: var(--font-sans);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 h1,
@@ -1369,10 +1370,12 @@ select option {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 600px;
     background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, transparent 70%);
     pointer-events: none;
+    z-index: -1;
 }
 
 .digitalizacion-grid {
@@ -1442,6 +1445,7 @@ select option {
     gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
@@ -1473,6 +1477,7 @@ select option {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
     width: 100%;
+    max-width: 100%;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -1675,10 +1680,12 @@ select option {
         grid-template-columns: 1fr;
         padding-top: 2rem;
         text-align: center;
+        align-items: center;
     }
 
     .hero-subtitle {
         margin: 0 auto 2rem;
+        text-align: center;
     }
 
     .hero-actions {
