@@ -76,10 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+
+                // If it's a row, trigger children animations with faster staggered delay
+                if (entry.target.classList.contains('row-reveal')) {
+                    const children = entry.target.querySelectorAll('.step-item');
+                    children.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.classList.add('active');
+                            // Trigger visible class for opacity if needed
+                            child.classList.add('visible');
+                        }, index * 100); // Faster stagger (100ms)
+                    });
+                }
+
                 revealObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
@@ -252,5 +265,23 @@ document.addEventListener('DOMContentLoaded', () => {
             heroHeader.classList.add('hero-tension-active');
         });
     }
+
+    // ─── PERSISTENT EMOJI SCROLL REVEAL ─────────────────────────────────────
+    const emojiCards = document.querySelectorAll('.emoji-scroll');
+    const emojiObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('emoji-visible');
+            } else {
+                // Exit animation when leaving viewport
+                entry.target.classList.remove('emoji-visible');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px' // Slightly earlier trigger
+    });
+
+    emojiCards.forEach(card => emojiObserver.observe(card));
 
 });

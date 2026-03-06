@@ -285,22 +285,51 @@
 
     <section class="dashboard-metrics" id="metricas">
         <div class="container">
+            <div class="metrics-header-mobile">
+                <span class="status-badge pulse">● Datos en tiempo real</span>
+            </div>
             <div class="metrics-grid">
                 <div class="metric-item reveal">
-                    <span class="metric-number" data-target="20">0</span>
-                    <span class="metric-label">Razones sociales administradas</span>
+                    <div class="metric-viz">
+                        <svg viewBox="0 0 100 40" class="sparkline">
+                            <path d="M0,35 L10,32 L20,38 L30,25 L40,28 L50,15 L60,20 L70,8 L80,12 L90,5 L100,2" />
+                        </svg>
+                    </div>
+                    <span class="metric-number" data-target="26">0</span>
+                    <span class="metric-label">Clientes atendidos</span>
+                    <span class="item-status">Revisión 2025</span>
                 </div>
                 <div class="metric-item reveal reveal-delay-1">
-                    <span class="metric-number" data-target="5">0</span>
-                    <span class="metric-label">Años de experiencia contable</span>
+                    <div class="metric-viz">
+                        <div class="experience-bar">
+                            <div class="bar-fill"></div>
+                        </div>
+                    </div>
+                    <span class="metric-number" data-target="6">0</span>
+                    <span class="metric-label">Años de experiencia.</span>
+                    <span class="item-status">Activo</span>
                 </div>
                 <div class="metric-item reveal reveal-delay-2">
-                    <span class="metric-number" data-target="100" data-suffix="%">0%</span>
+                    <div class="metric-viz">
+                        <div class="automation-pulse">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-dot"></div>
+                        </div>
+                    </div>
+                    <span class="metric-number" data-target="80" data-suffix="%">0%</span>
                     <span class="metric-label">Digital y automatizado</span>
+                    <span class="item-status success">En construcción</span>
                 </div>
                 <div class="metric-item reveal reveal-delay-3">
+                    <div class="metric-viz">
+                        <div class="degrees-icon">
+                            <span>🎓</span>
+                            <span>🤖</span>
+                        </div>
+                    </div>
                     <span class="metric-number" data-target="2">0</span>
                     <span class="metric-label">Licenciaturas: Contaduría + IA</span>
+                    <span class="item-status">Validado</span>
                 </div>
             </div>
         </div>
@@ -329,64 +358,73 @@
             <div class="digitalizacion-grid">
                 <div class="digitalizacion-text reveal">
                     <span class="hero-label">🚀 Digitalización de Negocios</span>
-                    <h2>Lleva tu negocio al mundo digital</h2>
-                    <p>Integro tu negocio a las plataformas más importantes del mercado y automatizo tus procesos para
-                        que puedas enfocarte en lo que realmente importa: crecer.</p>
+                    <h2>Haz que tu negocio funcione con tecnología</h2>
+                    <p>Integro herramientas digitales para que tu negocio pueda
+                        organizarse mejor, atraer clientes y operar con menos tareas manuales.</p>
                     <div class="digitalizacion-steps">
-                        <div class="step-item">
-                            <div class="step-icon">📋</div>
-                            <div class="step-content">
-                                <h4>Diagnóstico inicial gratuito</h4>
-                                <p>Analizamos tu negocio y definimos la mejor estrategia digital.</p>
+                        <div class="digitalizacion-row reveal row-reveal">
+                            <div class="step-item">
+                                <div class="step-icon">📋</div>
+                                <div class="step-content">
+                                    <h4>Análisis del negocio</h4>
+                                    <p>Revisamos cómo trabajas hoy y definimos qué procesos se pueden digitalizar o
+                                        mejorar.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-icon">🌐</div>
+                                <div class="step-content">
+                                    <h4>Implementación digital</h4>
+                                    <p>Conectamos tu negocio con plataformas, páginas web y sistemas donde ya se
+                                        mueven los clientes.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="step-item">
-                            <div class="step-icon">⚙️</div>
-                            <div class="step-content">
-                                <h4>Configuración y alta en plataformas</h4>
-                                <p>Te damos de alta en Uber Eats, DiDi Food, Rappi y más.</p>
+                        <div class="digitalizacion-row reveal row-reveal">
+                            <div class="step-item">
+                                <div class="step-icon">🤖</div>
+                                <div class="step-content">
+                                    <h4>Automatización inteligente</h4>
+                                    <p>Implemento automatizaciones y flujos de trabajo que organizan datos, capturan
+                                        clientes y simplifican tareas.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-icon">🤖</div>
-                            <div class="step-content">
-                                <h4>Automatización con IA</h4>
-                                <p>Flujos automáticos con n8n para captura de leads y notificaciones.</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-icon">📈</div>
-                            <div class="step-content">
-                                <h4>Seguimiento y optimización</h4>
-                                <p>Monitoreo continuo y ajustes para maximizar tus resultados.</p>
-                            </div>
+
                         </div>
                     </div>
-                    <a href="#contacto" class="btn btn-primary" style="margin-top: 2rem; display: inline-flex;">Quiero
-                        digitalizar mi negocio</a>
+                    <div class="digitalizacion-cta">
+                        <a href="#contacto" class="btn btn-primary btn-glow btn-salvation"
+                            style="margin-top: 2rem; display: inline-flex;">Quiero digitalizar mi negocio</a>
+                    </div>
                 </div>
+
+
+
+
                 <div class="digitalizacion-visual reveal reveal-delay-2">
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">🛵</div>
                         <div class="platform-name">Uber Eats</div>
                     </div>
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">🚗</div>
                         <div class="platform-name">DiDi Food</div>
                     </div>
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">🐰</div>
                         <div class="platform-name">Rappi</div>
                     </div>
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">🌐</div>
                         <div class="platform-name">Tu Página Web</div>
                     </div>
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">🤖</div>
                         <div class="platform-name">n8n + IA</div>
                     </div>
-                    <div class="platform-card">
+                    <div class="platform-card emoji-scroll">
                         <div class="platform-icon">📊</div>
                         <div class="platform-name">Power BI</div>
                     </div>
@@ -416,14 +454,14 @@
                 <div class="fallback-avatar">ED</div>
             </div>
             <div class="about-text">
-                <h2>Erick Domínguez Del Prado</h2>
+                <h2>Erick DDP</h2>
                 <div class="about-bio">
-                    <p>Soy Contador Público titulado con cédula profesional y más de 5 años de experiencia manejando
-                        contabilidad corporativa, cumplimiento fiscal ante el SAT y administración de múltiples razones
-                        sociales.</p>
-                    <p>Actualmente curso una Licenciatura en Inteligencia Artificial, lo que me permite combinar lo
-                        mejor de dos mundos: el rigor contable y el poder de la tecnología. El resultado son soluciones
-                        reales, accesibles y automatizadas para negocios como el tuyo.</p>
+                    <p>Ayudo a negocios y profesionales a ordenar sus finanzas, cumplir correctamente con el SAT y
+                        modernizar su operación usando tecnología. Mi enfoque combina contabilidad, sistemas y
+                        automatización para que tu negocio funcione con más claridad y control.</p>
+                    <p>Trabajo transformando procesos confusos o manuales en sistemas digitales simples y eficientes,
+                        permitiendo mejores decisiones, menos errores fiscales y una operación más preparada para
+                        crecer.</p>
                 </div>
                 <div class="skills-row">
                     <span class="skill-tag">SAT</span>
