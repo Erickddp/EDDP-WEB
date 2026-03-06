@@ -122,18 +122,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 16);
     }
 
-    // ─── FLIP CARDS MOBILE ──────────────────────────────────────────────────
+    // ─── FLIP CARDS MOBILE AUTO-SCROLL ──────────────────────────────────────
+    const flipCards = document.querySelectorAll('.flip-card');
+
     if (window.matchMedia('(hover: none)').matches) {
-        document.querySelectorAll('.flip-card').forEach(card => {
+        const flipObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('flipped-active');
+                } else {
+                    entry.target.classList.remove('flipped-active');
+                }
+            });
+        }, {
+            // Trigger when the card is in the middle of the viewport
+            rootMargin: '-30% 0px -30% 0px',
+            threshold: 0.1
+        });
+
+        flipCards.forEach(card => flipObserver.observe(card));
+
+        // Fallback: Toggle on click in case observer misses
+        flipCards.forEach(card => {
             card.addEventListener('click', () => {
-                const inner = card.querySelector('.flip-card-inner');
-                inner.classList.toggle('flipped-active');
+                card.classList.toggle('flipped-active');
             });
         });
     }
 
     // ─── LEAD FORM MAKE WEBHOOK ─────────────────────────────────────────────
-    // ⚠️ REEMPLAZA ESTA URL CON TU WEBHOOK DE MAKE
     const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/ocfah09brrq8gef6ageov2w2dl6mj2do';
 
     const leadFormMake = document.getElementById('form-servicios-erickddp');
@@ -144,45 +161,34 @@ document.addEventListener('DOMContentLoaded', () => {
         leadFormMake.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Validación Or/O: Debe haber WhatsApp o Correo
             const whatsapp = leadFormMake.whatsapp.value.trim();
             const email = leadFormMake.email.value.trim();
 
             if (!whatsapp && !email) {
                 formStatusMake.textContent = 'Por favor, proporciona al menos un medio de contacto (WhatsApp o Correo)';
                 formStatusMake.className = 'form-status error';
-                return; // Detiene el envío
+                return;
             }
 
-            // Estado visual "Enviando..."
             const originalBtnText = submitBtnMake.textContent;
             submitBtnMake.innerHTML = '<span class="spinner"></span> Enviando...';
             submitBtnMake.disabled = true;
             formStatusMake.textContent = '';
             formStatusMake.className = 'form-status';
 
-            // Usando FormData para capturar valores
             const formData = new FormData(leadFormMake);
             const data = Object.fromEntries(formData.entries());
             data.fecha = new Date().toISOString();
             data.fuente = 'Landing ErickDDP';
 
             try {
-                if (MAKE_WEBHOOK_URL === 'TU_URL_DE_MAKE_AQUI') {
-                    console.warn('⚠️ Webhook de Make no configurado. Reemplaza "TU_URL_DE_MAKE_AQUI" con tu enlace.');
-                    // Simulación para probar los estados visuales sin enviar
-                    await new Promise(resolve => setTimeout(resolve, 1500));
-                } else {
-                    // fetch() con el método POST y headers: { 'Content-Type': 'application/json' }
-                    const response = await fetch(MAKE_WEBHOOK_URL, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
-                    });
-                    if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-                }
+                const response = await fetch(MAKE_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
 
-                // Estado "Éxito" visualmente
                 formStatusMake.innerHTML = '✅ ¡Listo! Datos enviados correctamente. Te contactaré pronto.';
                 formStatusMake.classList.add('success');
                 submitBtnMake.innerHTML = '✅ ¡Éxito!';
@@ -196,12 +202,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error('Error al enviar formulario a Make:', error);
-                // Estado "Error" visualmente
                 formStatusMake.innerHTML = '❌ Error al enviar el formulario. <a href="https://wa.me/525534806184" target="_blank" style="color: #f87171; text-decoration: underline; font-weight: 600;">Escríbeme por WhatsApp →</a>';
                 formStatusMake.classList.add('error');
                 submitBtnMake.textContent = originalBtnText;
                 submitBtnMake.disabled = false;
             }
+        });
+    }
+
+    // ─── HERO CUMULATIVE PHRASE LOOP ─────────────────────────────────────
+    const heroHeader = document.querySelector('.hero');
+    const salvationBtn = document.getElementById('hero-cta-main');
+    const phrases = document.querySelectorAll('#hero-title .phrase');
+
+    if (phrases.length > 0) {
+        let currentPhrase = 0;
+        const phraseInterval = 1200; // Speed of lines appearing
+        const fullMessageHold = 5000; // Time to stay visible once complete
+
+        function showNextPhrase() {
+            if (currentPhrase < phrases.length) {
+                phrases[currentPhrase].classList.add('active');
+                currentPhrase++;
+                setTimeout(showNextPhrase, phraseInterval);
+            } else {
+                // Once all are shown, wait and then reset
+                setTimeout(() => {
+                    phrases.forEach(p => p.classList.remove('active'));
+                    currentPhrase = 0;
+                    // Short pause before starting over
+                    setTimeout(showNextPhrase, 1000);
+                }, fullMessageHold);
+            }
+        }
+
+        // Initial delay before first line
+        setTimeout(showNextPhrase, 500);
+    }
+
+    if (heroHeader && salvationBtn) {
+        heroHeader.classList.add('hero-tension-active');
+
+        salvationBtn.addEventListener('mouseenter', () => {
+            heroHeader.classList.remove('hero-tension-active');
+            heroHeader.style.transition = 'all 0.5s ease';
+        });
+
+        salvationBtn.addEventListener('mouseleave', () => {
+            heroHeader.classList.add('hero-tension-active');
         });
     }
 

@@ -34,7 +34,7 @@
                 <a href="#digitalizacion">Digitalización</a>
                 <a href="#contacto">Contacto</a>
             </div>
-            <a href="#contacto" class="btn btn-primary btn-glow">Agendar consulta gratis</a>
+            <a href="#contacto" class="btn btn-primary btn-glow">Consulta gratis</a>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
                 <span></span>
                 <span></span>
@@ -50,19 +50,23 @@
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#digitalizacion">Digitalización</a>
         <a href="#contacto">Contacto</a>
-        <a href="#contacto" class="btn btn-primary btn-lg">Agendar consulta gratis</a>
+        <a href="#contacto" class="btn btn-primary btn-lg">Consulta gratis</a>
     </div>
 
     <header class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
-                <span class="hero-label reveal">⚡ Contador Público + Inteligencia Artificial</span>
-                <h1 class="reveal reveal-delay-1">Tu negocio merece crecer. <br>Yo te ayudo a lograrlo.</h1>
-                <p class="hero-subtitle reveal reveal-delay-2">Asesoría fiscal, contabilidad digital y digitalización
-                    completa de tu negocio. Precios accesibles, atención directa. Sin despachos intermediarios.</p>
-                <div class="hero-actions reveal reveal-delay-3">
-                    <a href="#contacto" class="btn btn-primary btn-lg">Quiero una consulta gratis</a>
-                    <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+            <div class="hero-text" id="hero-main-layer">
+                <h1 class="reveal reveal-delay-1" id="hero-title">
+                    <span class="phrase phrase-1 active">Ordena tu negocio.</span>
+                    <span class="phrase phrase-2">Cumple con el SAT.</span>
+                    <span class="phrase phrase-3 text-accent">Hazlo crecer.</span>
+                </h1>
+                <p class="hero-subtitle reveal reveal-delay-2" id="hero-subtitle">Te asesoro para que no te preocupes
+                    del SAT y puedas estar seguro que <br> <strong>tu negocio prosperara.</strong></p>
+                <div class="hero-actions reveal reveal-delay-3" id="hero-actions">
+                    <a href="#contacto" class="btn btn-primary btn-lg btn-salvation" id="hero-cta-main">Consulta
+                        gratis</a>
+                    <a href="#servicios" class="btn btn-outline" id="hero-cta-secondary">Ver servicios</a>
                 </div>
             </div>
             <div class="hero-visual reveal reveal-delay-2">
@@ -71,55 +75,15 @@
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <!-- SVG Fallback Visual -->
                 <div class="hero-visual-fallback" style="display:none;">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
-                                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
-                            </radialGradient>
-                            <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#18181B" />
-                                <stop offset="100%" stop-color="#09090B" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Glow background -->
-                        <circle cx="250" cy="250" r="220" fill="url(#glow)" />
-                        <!-- Main card -->
-                        <rect x="80" y="120" width="340" height="220" rx="16" fill="url(#cardGrad)" stroke="#38bdf8"
-                            stroke-width="1" stroke-opacity="0.4" />
-                        <!-- Chart bars -->
-                        <rect x="120" y="240" width="30" height="70" rx="4" fill="#38bdf8" opacity="0.6" />
-                        <rect x="165" y="210" width="30" height="100" rx="4" fill="#38bdf8" opacity="0.8" />
-                        <rect x="210" y="190" width="30" height="120" rx="4" fill="#38bdf8" />
-                        <rect x="255" y="220" width="30" height="90" rx="4" fill="#38bdf8" opacity="0.7" />
-                        <rect x="300" y="200" width="30" height="110" rx="4" fill="#38bdf8" opacity="0.9" />
-                        <rect x="345" y="170" width="30" height="140" rx="4" fill="#38bdf8" />
-                        <!-- Line chart -->
-                        <polyline points="120,230 165,200 210,180 255,210 300,190 345,160" fill="none" stroke="#7dd3fc"
-                            stroke-width="2" stroke-dasharray="5,3" opacity="0.6" />
-                        <!-- Header text lines -->
-                        <rect x="120" y="145" width="120" height="8" rx="4" fill="#38bdf8" opacity="0.8" />
-                        <rect x="120" y="160" width="80" height="6" rx="3" fill="#71717A" opacity="0.6" />
-                        <!-- Floating small card -->
-                        <rect x="300" y="80" width="140" height="80" rx="12" fill="#18181B" stroke="#38bdf8"
-                            stroke-width="1" stroke-opacity="0.5" />
-                        <rect x="318" y="100" width="60" height="6" rx="3" fill="#38bdf8" opacity="0.7" />
-                        <rect x="318" y="115" width="40" height="6" rx="3" fill="#71717A" opacity="0.5" />
-                        <text x="318" y="148" font-family="monospace" font-size="16" fill="#38bdf8"
-                            font-weight="bold">+20%</text>
-                        <!-- Floating bottom card -->
-                        <rect x="60" y="360" width="130" height="70" rx="12" fill="#18181B" stroke="#38bdf8"
-                            stroke-width="1" stroke-opacity="0.4" />
-                        <text x="80" y="390" font-family="monospace" font-size="11" fill="#A1A1AA">SAT · CFDI 4.0</text>
-                        <rect x="80" y="400" width="70" height="5" rx="2" fill="#38bdf8" opacity="0.6" />
-                        <rect x="80" y="412" width="50" height="5" rx="2" fill="#38bdf8" opacity="0.3" />
-                        <!-- Dots -->
-                        <circle cx="440" cy="150" r="4" fill="#38bdf8" opacity="0.5" />
-                        <circle cx="60" cy="200" r="3" fill="#38bdf8" opacity="0.4" />
-                        <circle cx="420" cy="380" r="5" fill="#38bdf8" opacity="0.3" />
-                        <circle cx="150" cy="450" r="3" fill="#38bdf8" opacity="0.4" />
-                    </svg>
+                    <!-- ... SVG content ... -->
                 </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -135,9 +99,9 @@
     <section class="social-proof">
         <div class="container">
             <div class="badges-row">
-                <div class="badge glass-pill">🎓 Cédula Profesional · 13758780</div>
-                <div class="badge glass-pill">🤖 Lic. Inteligencia Artificial</div>
-                <div class="badge glass-pill">📍 Ciudad de México</div>
+                <div class="badge glass-pill">🎓 Contador P. <br> Ced Prof: 13758780</div>
+                <div class="badge glass-pill">🤖 Lic. en IA <br> Mat: 010818927</div>
+                <div class="badge glass-pill">📍 México, CDMX </div>
                 <div class="badge glass-pill">⭐ +5 años de experiencia</div>
             </div>
         </div>
@@ -163,117 +127,17 @@
 
     <section id="servicios" class="services">
         <div class="container">
-            <h2 class="section-title reveal">Soluciones <span style="color: var(--primary-400);">Reales</span></h2>
+            <h2 class="section-title reveal">Tu dime <span style="color: var(--primary-400);">yo lo resuelvo</span></h2>
             <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/1.png" alt="Declaración Anual">
-                            <div class="card-overlay">
-                                <h3>Declaración Anual / SAT</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Declaración Anual / SAT</h3>
-                            <p>Cumple con el SAT sin estrés. Calculo y presento tu declaración anual con todo en orden.
-                            </p>
-                            <div class="tags">
-                                <span class="tag">SAT</span>
-                                <span class="tag">ISR</span>
-                                <span class="tag">CFDI 4.0</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Más info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/2.png" alt="Contabilidad Mensual">
-                            <div class="card-overlay">
-                                <h3>Contabilidad Mensual</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Contabilidad Mensual</h3>
-                            <p>Lleva tu negocio con orden real. Estados financieros, conciliaciones y reportes claros
-                                cada mes.</p>
-                            <div class="tags">
-                                <span class="tag">Balance</span>
-                                <span class="tag">Reportes</span>
-                                <span class="tag">Dashboards</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Más info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/3.png" alt="Página Web Profesional">
-                            <div class="card-overlay">
-                                <h3>Página Web Profesional</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Página Web Profesional</h3>
-                            <p>Tu negocio necesita presencia digital. Diseño y desarrollo tu sitio web desde cero.</p>
-                            <div class="tags">
-                                <span class="tag">Diseño</span>
-                                <span class="tag">Dominio</span>
-                                <span class="tag">SEO básico</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Más info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/4.png" alt="Integración Plataformas">
-                            <div class="card-overlay">
-                                <h3>Plataformas Digitales</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Plataformas Digitales</h3>
-                            <p>Integra tu negocio a Uber Eats, DiDi Food, Rappi y más. Más canales, más ventas.</p>
-                            <div class="tags">
-                                <span class="tag">Uber Eats</span>
-                                <span class="tag">DiDi</span>
-                                <span class="tag">Rappi</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Más info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/5.png" alt="Automatización IA">
-                            <div class="card-overlay">
-                                <h3>Automatización con IA</h3>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Automatización con IA</h3>
-                            <p>Flujos inteligentes con n8n, captura de leads automática, notificaciones y más.</p>
-                            <div class="tags">
-                                <span class="tag">n8n</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">IA</span>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Más info</button>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+
+
+
                 <!-- Card 6 -->
-                <div class="flip-card">
+                <div class="flip-card" id="card-fiscal">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <img src="images/6.png" alt="Asesoría Fiscal">
@@ -282,17 +146,125 @@
                             </div>
                         </div>
                         <div class="flip-card-back">
-                            <h3>Asesoría Fiscal</h3>
-                            <p>¿Tienes dudas con el SAT, DIOT o CFDI? Te oriento paso a paso con soluciones reales.</p>
+                            <h3>Resuelve tus dudas con el SAT</h3>
+                            <p>Aclara problemas fiscales y mantén tu negocio en regla con orientación clara.</p>
                             <div class="tags">
-                                <span class="tag">DIOT</span>
+                                <span class="tag">SAT</span>
                                 <span class="tag">Buzon SAT</span>
-                                <span class="tag">PM</span>
+                                <span class="tag">Fizcalizacion</span>
                             </div>
                             <button class="btn btn-sm btn-outline">Más info</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 1 -->
+                <div class="flip-card" id="card-sat">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/1.png" alt="Declaración Anual">
+                            <div class="card-overlay">
+                                <h3>Declaración Anual / SAT</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Cumple correctamente con tu declaración</h3>
+                            <p>Presenta tu declaración anual sin errores y evita multas o problemas fiscales.</p>
+                            <div class="tags">
+                                <span class="tag">Declaracion de impuestos</span>
+                                <span class="tag">Devoluciones de ISR</span>
+                                <span class="tag">Reporte anual</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="flip-card" id="card-mensual">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/2.png" alt="Contabilidad Mensual">
+                            <div class="card-overlay">
+                                <h3>Contabilidad Mensual</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Control financiero mes a mes</h3>
+                            <p>Mantén orden en tus números y entiende realmente cómo va tu negocio.</p>
+                            <div class="tags">
+                                <span class="tag">Estados Financieros</span>
+                                <span class="tag">Conciliaciones</span>
+                                <span class="tag">Control</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="flip-card" id="card-plataformas">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/4.png" alt="Integración Plataformas">
+                            <div class="card-overlay">
+                                <h3>Presencia en Plataformas Digitales</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Tu negocio en más lugares</h3>
+                            <p>Publica y posiciona tu negocio en plataformas digitales para llegar a más clientes.</p>
+                            <div class="tags">
+                                <span class="tag">Marketplace</span>
+                                <span class="tag">Redes Sociales</span>
+                                <span class="tag">Servicios Online</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="flip-card" id="card-web">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/3.png" alt="Página Web Profesional">
+                            <div class="card-overlay">
+                                <h3>Página Web Profesional</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Tu negocio visible en internet</h3>
+                            <p>Un sitio web profesional que genere confianza y atraiga nuevos clientes.</p>
+                            <div class="tags">
+                                <span class="tag">Sitio Web</span>
+                                <span class="tag">Dominio y Hosting</span>
+                                <span class="tag">SEO básico</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="flip-card" id="card-ia">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/5.png" alt="Automatización IA">
+                            <div class="card-overlay">
+                                <h3>Automatización con IA</h3>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Procesos que trabajan por ti</h3>
+                            <p>Automatiza tareas y flujos de trabajo para ahorrar tiempo y operar mejor.</p>
+                            <div class="tags">
+                                <span class="tag">IA</span>
+                                <span class="tag">n8n - Make</span>
+                                <span class="tag">Scripts</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Más info</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -439,7 +411,7 @@
     <section id="sobre-mi" class="about-section">
         <div class="container about-content">
             <div class="about-image">
-                <img src="images/prof.png" alt="Erick Domínguez Del Prado"
+                <img src="images/perfil.png" alt="Erick Domínguez Del Prado"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <div class="fallback-avatar">ED</div>
             </div>
@@ -513,8 +485,7 @@
                     </div>
                     <div class="form-group">
                         <label for="negocio">Nombre de tu negocio o actividad</label>
-                        <input type="text" id="negocio" name="negocio"
-                            placeholder="Empresa S.A. de C.V. / Freelancer">
+                        <input type="text" id="negocio" name="negocio" placeholder="Empresa S.A. de C.V. / Freelancer">
                     </div>
                     <div class="form-row">
                         <div class="form-group">
@@ -546,10 +517,19 @@
                             placeholder="Detalles adicionales (opcional)"></textarea>
                     </div>
 
-                    <div class="form-group checkbox-group" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px;">
-                        <input type="checkbox" id="acepto_privacidad" name="Acepto_Privacidad" required style="margin-top: 5px; cursor: pointer; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--primary-400);">
-                        <label for="acepto_privacidad" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; display: inline; cursor: pointer;">
-                            Acepto el <a href="aviso-privacidad.html" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Aviso de Privacidad</a>, los <a href="legal.html#terminos" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Términos de Servicio</a> y el <a href="legal.html#etica" target="_blank" style="color: var(--primary-400); text-decoration: underline;">Protocolo de Ética en IA</a>.
+                    <div class="form-group checkbox-group"
+                        style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px;">
+                        <input type="checkbox" id="acepto_privacidad" name="Acepto_Privacidad" required
+                            style="margin-top: 5px; cursor: pointer; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--primary-400);">
+                        <label for="acepto_privacidad"
+                            style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; display: inline; cursor: pointer;">
+                            Acepto el <a href="aviso-privacidad.html" target="_blank"
+                                style="color: var(--primary-400); text-decoration: underline;">Aviso de Privacidad</a>,
+                            los <a href="legal.html#terminos" target="_blank"
+                                style="color: var(--primary-400); text-decoration: underline;">Términos de Servicio</a>
+                            y el <a href="legal.html#etica" target="_blank"
+                                style="color: var(--primary-400); text-decoration: underline;">Protocolo de Ética en
+                                IA</a>.
                         </label>
                     </div>
 
