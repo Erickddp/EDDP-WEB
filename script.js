@@ -163,65 +163,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ─── LEAD FORM MAKE WEBHOOK ─────────────────────────────────────────────
-    const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/ocfah09brrq8gef6ageov2w2dl6mj2do';
-
-    const leadFormMake = document.getElementById('form-servicios-erickddp');
-    const formStatusMake = document.getElementById('formStatus');
-    const submitBtnMake = leadFormMake ? leadFormMake.querySelector('button[type="submit"]') : null;
-
-    if (leadFormMake && submitBtnMake) {
-        leadFormMake.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const whatsapp = leadFormMake.whatsapp.value.trim();
-            const email = leadFormMake.email.value.trim();
-
-            if (!whatsapp && !email) {
-                formStatusMake.textContent = 'Por favor, proporciona al menos un medio de contacto (WhatsApp o Correo)';
-                formStatusMake.className = 'form-status error';
-                return;
-            }
-
-            const originalBtnText = submitBtnMake.textContent;
-            submitBtnMake.innerHTML = '<span class="spinner"></span> Enviando...';
-            submitBtnMake.disabled = true;
-            formStatusMake.textContent = '';
-            formStatusMake.className = 'form-status';
-
-            const formData = new FormData(leadFormMake);
-            const data = Object.fromEntries(formData.entries());
-            data.fecha = new Date().toISOString();
-            data.fuente = 'Landing ErickDDP';
-
-            try {
-                const response = await fetch(MAKE_WEBHOOK_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-                formStatusMake.innerHTML = '✅ ¡Listo! Datos enviados correctamente. Te contactaré pronto.';
-                formStatusMake.classList.add('success');
-                submitBtnMake.innerHTML = '✅ ¡Éxito!';
-                leadFormMake.reset();
-
-                setTimeout(() => {
-                    submitBtnMake.textContent = originalBtnText;
-                    submitBtnMake.disabled = false;
-                    submitBtnMake.classList.add('btn-pulse');
-                }, 4000);
-
-            } catch (error) {
-                console.error('Error al enviar formulario a Make:', error);
-                formStatusMake.innerHTML = '❌ Error al enviar el formulario. <a href="https://wa.me/525534806184" target="_blank" style="color: #f87171; text-decoration: underline; font-weight: 600;">Escríbeme por WhatsApp →</a>';
-                formStatusMake.classList.add('error');
-                submitBtnMake.textContent = originalBtnText;
-                submitBtnMake.disabled = false;
-            }
-        });
-    }
+    /*
+     * FORMULARIO DE CONTACTO CON WEBHOOK (DESACTIVADO)
+     * Solo se usa WhatsApp como método de contacto principal.
+     * Descomentar si se necesita reactivar el formulario Make/n8n más adelante.
+     *
+     * const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/ocfah09brrq8gef6ageov2w2dl6mj2do';
+     * const leadFormMake = document.getElementById('form-servicios-erickddp');
+     * const submitBtnMake = leadFormMake ? leadFormMake.querySelector('button[type="submit"]') : null;
+     * if (leadFormMake && submitBtnMake) {
+     *     leadFormMake.addEventListener('submit', async (e) => { ... });
+     * }
+     */
 
     // ─── HERO CUMULATIVE PHRASE LOOP ─────────────────────────────────────
     const heroHeader = document.querySelector('.hero');
@@ -285,3 +238,38 @@ document.addEventListener('DOMContentLoaded', () => {
     emojiCards.forEach(card => emojiObserver.observe(card));
 
 });
+
+
+//Testimonios
+const testimonials = [
+    {
+        inicial: "M.R.",
+        ocupacion: "Dueña de Cafetería",
+        comentario: "Recuperé deducciones que no sabía que existían. Mi declaración anual pasó de ser un dolor de cabeza a una ventaja competitiva."
+    },
+    {
+        inicial: "C.L.",
+        ocupacion: "Freelance de Diseño",
+        comentario: "Automatizó mi facturación y ahora solo me enfoco en crear. La plataforma myfiscal me cambió la vida profesional."
+    },
+    {
+        inicial: "J.P.",
+        ocupacion: "Director de Logística",
+        comentario: "Regularizó 3 años de contabilidad atrasada sin drama. Profesional, discreto y con herramientas que realmente funcionan."
+    },
+    {
+        inicial: "A.G.",
+        ocupacion: "Consultora de Marketing",
+        comentario: "Me explicó el SAT en lenguaje humano. Ahora entiendo mis obligaciones y duermo tranquila."
+    },
+    {
+        inicial: "R.S.",
+        ocupacion: "Gerente de Ventas",
+        comentario: "Su enfoque con IA me permitió optimizar procesos que creía imposibles de mejorar. Resultados medibles desde el primer mes."
+    },
+    {
+        inicial: "L.M.",
+        ocupacion: "Emprendedor E-commerce",
+        comentario: "Construyó un sistema que me avisa antes de que incumpla. Contador plan anual fue exactamente lo que mi negocio necesitaba."
+    }
+];

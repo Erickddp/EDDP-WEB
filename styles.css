@@ -1771,3 +1771,351 @@ select option {
         font-size: 2rem;
     }
 }
+
+/* ─── HERO CENTERED (Updated Layout) ───────────────────────────────────────── */
+.hero-label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--primary-400);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 9999px;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(56, 189, 248, 0.06);
+}
+
+.hero-centered {
+    align-items: center;
+    text-align: center;
+}
+
+.hero-centered .hero-text {
+    max-width: 820px;
+    text-align: center;
+}
+
+.hero-title-main {
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.hero-centered .hero-subtitle {
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    max-width: 640px;
+}
+
+.hero-centered .hero-actions {
+    align-items: center;
+    flex-direction: row;
+    max-width: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .hero-centered .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+    }
+}
+
+/* ─── FISCAL EXPLAINER ──────────────────────────────────────────────────────── */
+.fiscal-explainer {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(56, 189, 248, 0.03) 100%);
+}
+
+.fiscal-explainer .section-title {
+    margin-bottom: 1rem;
+}
+
+.simple-explanation {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.explainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.explainer-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.explainer-card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.1);
+}
+
+.explainer-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-400);
+}
+
+.explainer-card p {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .explainer-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── TESTIMONIALS ───────────────────────────────────────────────────────────── */
+.testimonials {
+    padding: 6rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.25);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.client-initial {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: white;
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+}
+
+.client-occupation {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.testimonials-disclaimer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-quaternary);
+    font-style: italic;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── WHATSAPP CONTACT SECTION ───────────────────────────────────────────────── */
+.contact-whatsapp {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: var(--bg-primary);
+}
+
+.contact-whatsapp h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.contact-whatsapp .contact-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #25d366;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+    color: #fff;
+}
+
+/* ─── GRADIENT TEXT (highlight accent) ──────────────────────────────────────── */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ─── BADGES INTRO ────────────────────────────────────────────────────────────── */
+.badges-intro {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1.25rem;
+    font-style: italic;
+}
+
+/* ─── SERVICES INTRO ─────────────────────────────────────────────────────────── */
+.services-intro {
+    text-align: center;
+    max-width: 680px;
+    margin: -1.5rem auto 3rem;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ─── TESTIMONIALS INTRO ─────────────────────────────────────────────────────── */
+.testimonials-intro {
+    text-align: center;
+    max-width: 780px;
+    margin: -1rem auto 3rem;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ─── SECTION TAG (pill label above section headlines) ───────────────────────── */
+.section-tag {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    color: #a5b4fc;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-mono);
+}
+
+/* ─── DIGITALIZATION INTRO ───────────────────────────────────────────────────── */
+.digitalization-intro {
+    max-width: none;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* ─── FINAL CTA SECTION ──────────────────────────────────────────────────────── */
+.final-cta {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.final-cta .cta-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.25rem;
+}
+
+.final-cta .cta-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.1rem 2.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+    transition: var(--transition);
+}
+
+.btn-whatsapp-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+    color: white;
+}
+
+.cta-footer-note {
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    color: var(--text-quaternary);
+    font-style: italic;
+}
